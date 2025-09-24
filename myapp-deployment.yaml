@@ -15,6 +15,7 @@ spec:
       containers:
       - name: app
         image: hiba2025/exp8app:v3
-        imagePullPolicy: Never   # important if using local Docker Desktop build
+        imagePullPolicy: Always   # important if using local Docker Desktop build
         ports:
         - containerPort: 5050
+
