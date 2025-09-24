@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+      - name: app
+        image: hiba2025/exp8app:v3
+        imagePullPolicy: Never   # important if using local Docker Desktop build
+        ports:
+        - containerPort: 5050
